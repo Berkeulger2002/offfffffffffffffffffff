@@ -1,0 +1,185 @@
+.home-container {
+  padding: 25px;
+  background-color: #242A32;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 80%;
+  margin-bottom: 20px;
+  margin-left: 12rem;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 20rem;
+}
+
+.slide-item {
+  min-width: 200px; /* Adjust width as needed */
+  margin-right: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.slide-item:hover {
+  transform: scale(1.05); /* Optional hover effect */
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-button.prev {
+  left: 0;
+}
+
+.slider-button.next {
+  right: 0;
+}
+
+.category-movies {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+  gap: 10px; /* Space between items */
+  margin-top: 20px;
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+.movie-item {
+  cursor: pointer;
+  text-align: center; /* Center-align the text below images */
+  width: 100%;
+
+}
+
+.movie-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  transition: transform 0.3s;
+}
+
+.movie-item img:hover {
+  transform: scale(1.05);
+}
+
+
+.home-container {
+  padding: 0; /* Tüm padding'leri sıfırladık */
+  margin: 0; /* Varsayılan margin değerlerini de sıfırladık */
+  background-color: #242A32; 
+  color: #FFFFFF; 
+  min-height: 100vh; 
+}
+
+
+body {
+  margin: 0; 
+  background-color: #242A32; 
+}
+
+.navbar {
+  width: 100%;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.navbar ul li {
+  margin: 10px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  font-size: 25px; /* Yazı boyutunu büyütür */
+  font-weight: bold; /* Yazıyı kalın yapar */
+  transition: color 0.3s;
+}
+
+
+
+/* Responsive tasarım için medya sorgusu */
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul li {
+    margin: 5px 0;
+  }
+}
+.form-container {
+  display: flex;
+  justify-content: center; /* Center the form container horizontally */
+  width: 100%; /* Use full width for the container */
+  margin: 0 auto; /* Center alignment for the form */
+}
+
+.search-form {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  width: 100%;
+}
+
+.input-wrapper {
+  position: relative;
+  margin-left: 12rem; /* Add margin-left for the input wrapper */
+  width: 90rem; /* Set the width for the wrapper */
+}
+
+.search-form input[name="search"] {
+  width: 100%; /* Take full width of the input wrapper */
+  height: 2rem; /* Set the height of the search input */
+  padding: 0.25rem; /* Add padding for better look */
+  font-size: 1rem; /* Adjust font size */
+  border: 1px solid #ccc; /* Add border for better look */
+  border-radius: 4px; /* Add border radius for rounded corners */
+  background-color: #3A3F47; /* Set the background color to dark */
+  color: #3A3F47; /* Set text color to white for contrast */
+  padding-right: 5rem; /* Add padding to make space for the button inside the input */
+  box-sizing: border-box; /* Include padding in the element's total width */
+}
+
+.search-form button {
+  position: absolute;
+  right: 1rem; /* Adjust to 1rem inside the input field */
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background-color: #3A3F47; /* Match the input field background color */
+}
+
+.search-form button img {
+  width: 24px; /* Adjust icon size */
+  height: 24px; /* Adjust icon size */
+}

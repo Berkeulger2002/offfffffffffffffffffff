@@ -1,0 +1,86 @@
+/* Container for the entire search form and results */
+.container {
+  max-width: 800px;
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  background-color: #882727; /* Light background for contrast */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the search form */
+form {
+  display: flex;
+  align-items: center; /* Align input and button */
+  gap: 10px; /* Space between input and button */
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1; /* Input takes full width */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff; /* Blue button */
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Styling for search results */
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+div *ngFor {
+  margin-bottom: 20px; /* Space between movie results */
+  padding: 10px;
+  background-color: #3A3F47; /* White background for each result */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+h3 {
+  margin-left: 20rem;
+
+  font-size: 20px;
+  color: #007bff;
+}
+
+img {
+  width: 80px;
+  height: auto;
+  border-radius: 4px;
+}
+
+p {
+  margin-left: 20rem;
+margin-right: 30rem;
+  color: #bbb7b7;
+  font-size: 14px;
+}
+.search-container{
+  background-color: #3A3F47;
+}
+img{
+  margin-left: 20rem;
+
+  height: 10rem;
+  width: 10rem;
+}

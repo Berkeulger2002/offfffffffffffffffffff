@@ -1,0 +1,8 @@
+<div class="search-container">
+  <h2>Arama Sonuçları:</h2>
+  <div *ngFor="let movie of searchResults" (click)="goToMovieDetail(movie.id)">
+    <h3>{{ movie.title }}</h3>
+    <img [src]="'https://image.tmdb.org/t/p/w200' + movie.poster_path" *ngIf="movie.poster_path" />
+    <p>{{ movie.overview }}</p>
+  </div>
+</div>

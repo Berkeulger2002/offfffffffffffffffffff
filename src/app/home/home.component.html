@@ -1,0 +1,57 @@
+<div class="home-container">
+  <div class="form-container">
+    <form class="search-form" (ngSubmit)="onSearch()">
+      <div class="input-wrapper">
+        <input [(ngModel)]="searchTerm" name="search" placeholder="Search" />
+        <button type="submit">
+          <img src="https://img.icons8.com/?size=100&id=14079&format=png&color=1A1A1A" alt="Search Icon" />
+        </button>
+      </div>
+    </form>
+  </div>
+  
+  
+  
+  <div *ngIf="searchResults.length > 0" class="search-results-container">
+    <h2>Arama Sonuçları:</h2>
+    <div *ngFor="let movie of searchResults">
+      <h3>{{ movie.title }}</h3>
+      <img [src]="'https://image.tmdb.org/t/p/w200' + movie.poster_path" *ngIf="movie.poster_path" />
+      <p>{{ movie.overview }}</p>
+    </div>
+  </div>
+  
+
+
+  <!-- Category Title -->
+  <h1>{{ currentCategoryTitle }}</h1>
+
+  <!-- Popular Movies Slider -->
+  <div class="slider-container">
+    <button (click)="prevSlide()" class="slider-button prev">‹</button>
+    <div class="slider">
+      <div class="slide" [style.transform]="transform">
+        <!-- Popular movies slider content -->
+        <div *ngFor="let movie of popularMovies" class="slide-item">
+          <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }}" (click)="goToDetail(movie.id)">
+        </div>
+      </div>
+    </div>
+    <button (click)="nextSlide()" class="slider-button next">›</button>
+  </div>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a (click)="selectCategory('popular')">Popular</a></li>
+      <li><a (click)="selectCategory('top_rated')">Top Rated</a></li>
+      <li><a (click)="selectCategory('now_playing')">Now Playing</a></li>
+      <li><a (click)="selectCategory('upcoming')">Upcoming</a></li>
+    </ul>
+  </nav>
+  <!-- Category Movies -->
+  <div class="category-movies">
+    <div *ngFor="let movie of currentCategoryMovies" class="movie-item">
+      <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }}" (click)="goToDetail(movie.id)">
+    </div>
+  </div>
+</div>

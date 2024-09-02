@@ -1,0 +1,68 @@
+.movie-details {
+    padding: 20px;
+    background-color: #242A32; /* Background color */
+    color: #FFFFFF; /* Text color */
+  }
+  
+  .main-poster-container {
+    position: relative;
+    width: 40vw; /* Set container width to half the viewport width */
+    margin-bottom: 20px; /* Space below the poster */
+    overflow: hidden;
+    margin-left: 40rem;
+
+  }
+  
+  .main-poster {
+    width: 100%; /* Make the large image take the full width of its container */
+    height: 60vh; /* Set a fixed height based on viewport height or adjust as needed */
+    object-fit: cover;
+  }
+
+  
+  .small-poster-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 10px; /* Optional: space from edges of the large image */
+    margin-left: 2rem;
+  }
+  
+  .small-poster {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 4px; /* Optional: add rounded corners */
+    position: relative;
+    z-index: 1; /* Ensure it is above the large image */
+  }
+  
+  .movie-nav {
+    background-color: #242A32; /* Background color for the nav */
+    padding: 10px;
+    margin-bottom: 20px; /* Space below the nav */
+    border-radius: 4px; /* Optional: add rounded corners */
+  }
+  
+  .movie-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center-align the nav items */
+  }
+  
+  .movie-nav ul li {
+    margin: 0 15px; /* Space between nav items */
+  }
+  
+  .movie-nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF; /* Text color */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Font weight */
+  }
+  
+  .movie-info {
+    text-align: center; /* Center-align movie info */
+  }
+  

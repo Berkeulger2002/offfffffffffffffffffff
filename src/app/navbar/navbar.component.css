@@ -1,0 +1,27 @@
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centers the items horizontally */
+    gap: 20px; /* Space between each nav item */
+  }
+  
+  .nav-item {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-item:hover {
+    background-color: green; /* Changes the background color on hover */
+  }
+  
